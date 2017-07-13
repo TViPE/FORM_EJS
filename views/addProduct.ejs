@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="uft-8">
+		<title>main page</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container" id="addProductForm">
+			<h2 class="text-center">Add Item</h2>
+			<form action="/upload" method="post" enctype="multipart/form-data">
+				<input type="text" class="form-control" name="name" placeholder="Name"><br>
+				<input type="text" class="form-control" name="description" placeholder="Description"><br>
+				<input type="text" class="form-control" name="videoID" placeholder="Video ID"><br>
+				<input type="file" name="imageFile"><br>
+				<input type="submit" class="btn btn-info form-control" value="Add Product">
+			</form>
+		</div>
+	</body>
+</html>

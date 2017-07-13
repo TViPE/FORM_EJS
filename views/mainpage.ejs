@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="uft-8">
+		<title>main page</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container" id="content">
+			<h3>this is main page</h3>
+			<h3>Table</h3>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<td>ID</td>
+						<td>Name</td>
+						<td>Description</td>
+						<td>Video ID</td>
+						<td>Image</td>
+						<td>Edit</td>
+					</tr>
+				</thead>
+				<tbody>
+					<% data.forEach(function(e,i){
+					%><tr>
+						<td><%= i+1 %></td>
+						<td><%= e.name %></td>
+						<td><%= e.description %></td>
+						<td><%= e.videoID %></td>
+						<td><img src="img/<%= e.image %>" style="width: 150px" alt=""></td>
+						<td>
+							<a href="/remove/<%=i%>">Remove</a> /
+							<a href="/edit/<%=i%>">Edit</a>
+						</td>
+						<%
+					});
+					%>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
